@@ -9,7 +9,51 @@ header a {
   padding: 10px;
 }
 
-.header-grid {
+.hamburger-checkbox {
+  display: none;
+}
+
+.header-grid ul {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.header-grid ul li {
+  padding: 20px 0px;
+}
+
+@media (max-width: 600px) {
+
+
+  .hamburger-label span {
+    margin: 7px 0px;
+    height: 3px;
+    width: 35px;
+    background-color: #fe3525;
+    display: block;
+  }
+
+  .hamburger-checkbox:checked + .menu {
+    left: 0;
+  }
+
+  .menu {
+    background-color: #ffdfe7;
+    width: 100%;
+    left: -100%;
+    transition: all 0.5s ease-out;
+    padding: 20px 0px;
+    position: absolute;
+  }
+
+  .header-grid ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
 }
